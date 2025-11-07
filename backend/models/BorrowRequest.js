@@ -9,10 +9,10 @@ const borrowRequestSchema = new mongoose.Schema({
   quantity: { type: Number, required: true, min: 1 },
   status: { type: String, enum: ["Pending", "Approved", "Rejected", "Returned"], default: "Pending" },
   requestDate: { type: Date, default: Date.now },
-  issueDate: { type: Date },      // when equipment was issued
-  returnDate: { type: Date },     // when student returns it
-  dueDate: { type: Date },        // optional: auto-calculate based on lending rules
-  remarks: { type: String }       // optional notes
+  issueDate: { type: Date },      
+  returnDate: { type: Date },     
+  dueDate: { type: Date },        // auto-calculate based on lending rules
+  remarks: { type: String }       
 });
 
 export default mongoose.model("BorrowRequest", borrowRequestSchema);
