@@ -18,7 +18,7 @@ export default function Login() {
       localStorage.setItem("role", role);
       localStorage.setItem("id", userId);
 
-      // Redirect based on role
+      // Redirect
       navigate("/dashboard");
 
     } catch (err) {
